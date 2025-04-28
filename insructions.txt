@@ -10,6 +10,10 @@ cd .. mssql-fts-sql_tools-final\offline-debs
 4) build image
 docker build --platform=linux/amd64 --no-cache -t mssql-full . 2>&1 | tee build2.log
 
-5) wait about 40 seconds and run Spring app
+5) Move to the folder
+  cd .. mssql-fts-sql_tools-final
+
+
+6) wait about 40 seconds and run Spring app
 #Replace super@123 to your mssql container password
 docker run -e ACCEPT_EULA=Y -e SA_PASSWORD=super@123 -e DB_NAME=eboard-local -p 1433:1433 --restart=no -d mssql-full:latest
