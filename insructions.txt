@@ -15,5 +15,5 @@ docker build --platform=linux/amd64 --no-cache -t mssql-full . 2>&1 | tee build2
 
 
 6) wait about 40 seconds and run Spring app
-#Replace super@123 to your mssql container password
+#Replace super@123 to your password at least 9 characters, with upper case, number and etc
 docker run -e ACCEPT_EULA=Y -e SA_PASSWORD=super@123 -e DB_NAME=eboard-local -p 1433:1433 --restart=no -d mssql-full:latest
