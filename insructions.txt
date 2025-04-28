@@ -20,6 +20,10 @@ docker build --platform=linux/amd64 --no-cache -t mssql-full . 2>&1 | tee build2
 #Replace super@123 to your password at least 9 characters, with upper case, number and etc
 docker run -e ACCEPT_EULA=Y -e SA_PASSWORD=super@123 -e DB_NAME=eboard-local -p 1433:1433 --restart=no -d mssql-full:latest
 
+7) In IDEA open connection properties, choose Schemas tab and click on eboard-local database to be able to see it.
+
+
+
 Troubleshooting
 If you see in container logs error:
 
