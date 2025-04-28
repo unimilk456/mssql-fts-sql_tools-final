@@ -1,0 +1,10 @@
+1) clone project
+https://github.com/unimilk456/mssql-fts-sql_tools-final.git
+
+2)
+cd .. mssql-fts-sql_tools-final
+
+3) build image
+docker build --platform=linux/amd64 --no-cache -t mssql-full . 2>&1 | tee build2.log
+
+4) wait about 40 seconds and run Spring app
