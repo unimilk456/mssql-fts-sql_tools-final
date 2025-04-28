@@ -2,7 +2,7 @@
 https://github.com/unimilk456/mssql-fts-sql_tools-final.git
 
 2)
-cd .. mssql-fts-sql_tools-final\offline-debs
+cd  ./mssql-fts-sql_tools-final\offline-debs
 
 3) Uncompress archives
 7z x deb_final.7z.001
@@ -12,8 +12,8 @@ cd .. mssql-fts-sql_tools-final\offline-debs
 4) build image
 docker build --platform=linux/amd64 --no-cache -t mssql-full . 2>&1 | tee build2.log
 
-5) Move to the folder
-  cd .. mssql-fts-sql_tools-final
+5) Move to the folder mssql-fts-sql_tools-final
+  cd ..
 
 
 6) wait about 40 seconds and run Spring app
@@ -23,12 +23,9 @@ docker run -e ACCEPT_EULA=Y -e SA_PASSWORD=super@123 -e DB_NAME=eboard_local -p 
 7) In IDEA open connection properties, choose Schemas tab and click on eboard_local database to be able to see it.
 
 
-
-Troubleshooting
+**Troubleshooting**
 If you see in container logs error:
 
 2025-04-28 13:21:22 standard_init_linux.go:347: exec user process: name = /init-db.sh, args = [/init-db.sh], environ = [PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin HOSTNAME=2b7ed99ab9ac ACCEPT_EULA=Y SA_PASSWORD=Ytnhjym1900 DB_NAME=eboard-local DEBIAN_FRONTEND=noninteractive LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8 HOME=/root] caused: no such file or directory
 
 then GoTO step 4).
-
- step
