@@ -7,7 +7,7 @@ cd .. mssql-fts-sql_tools-final\offline-debs
 3) Uncompress archives
 7z x deb_final.7z.001
 
-4) Check in IDEA in the right botton coner that choosen LF (Unix and MacOs \n )
+4) Check in IDEA for file init-db.sh  in the right botton corner that choosen LF (Unix and MacOs \n )
 
 4) build image
 docker build --platform=linux/amd64 --no-cache -t mssql-full . 2>&1 | tee build2.log
