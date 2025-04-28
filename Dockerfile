@@ -1,7 +1,7 @@
 FROM ubuntu:20.04
 
 ENV ACCEPT_EULA=Y
-ENV DB_NAME=eboard-local
+ENV DB_NAME=eboard_local
 ENV DEBIAN_FRONTEND=noninteractive
 ENV LANG=en_US.UTF-8
 ENV LANGUAGE=en_US:en
