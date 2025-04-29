@@ -2,11 +2,11 @@
 docker build --platform=linux/amd64 --no-cache -t mssql-full . 2>&1 | tee build2.log
 
 #Replace super@123 to your mssql container password
-docker run -e ACCEPT_EULA=Y -e SA_PASSWORD=super@123 -e DB_NAME=eboard-local -p 1433:1433 --restart=no -d mssql-full:latest
+docker run -e ACCEPT_EULA=Y -e SA_PASSWORD=super@123 -e DB_NAME=eboard_local -p 1433:1433 --restart=no -d mssql-full:latest
 
 docker builder prune -af -- clean docker caches
 
 
 /opt/mssql-tools18/bin/sqlcmd -S localhost -U SA -P Mikhail@3fgF!d8d30_D -C -Q "SELECT name FROM sys.databases"
 
-docker run -e ACCEPT_EULA=Y -e SA_PASSWORD=super@123 -e DB_NAME=eboard-local -p 1433:1433 --restart=no -d mssql-full:latest
+docker run -e ACCEPT_EULA=Y -e SA_PASSWORD=super@123 -e DB_NAME=eboard_local -p 1433:1433 --restart=no -d mssql-full:latest
